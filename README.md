@@ -3,7 +3,7 @@
 ![Python](https://img.shields.io/badge/python-3.11-blue)
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.4-red)
 
-i'm new to deep learning so i started with the classic — train a CNN to read handwritten digits. got ~99% on the test set which i was pretty happy with.
+a small CNN trained on MNIST. hits ~99% on the test set after 5 epochs.
 
 ---
 
@@ -15,13 +15,13 @@ i'm new to deep learning so i started with the classic — train a CNN to read h
 | training time | ~2 min on CPU, ~20 sec on GPU |
 | parameters | ~225k |
 
-the mistakes are mostly weird handwriting — 4s that look like 9s, 7s that look like 1s. fair enough.
+the mistakes are mostly weird handwriting — 4s that look like 9s, 7s that look like 1s.
 
 ---
 
 ## the model
 
-just a basic CNN, nothing fancy:
+basic CNN:
 
 ```
 input 28x28
@@ -52,12 +52,9 @@ python src/evaluate.py
 
 ---
 
-## what i learned
+## what's next
 
-- dropout actually helps (without it i overfit by epoch 3)
-- LBFGS is way more efficient than SGD for small problems but i used adam here anyway
-- the gram matrix idea from style transfer doesn't apply here but that's the next project
-- training on GPU is like 6x faster, but for MNIST CPU is fine
+want to extend this to Fashion-MNIST and EMNIST (letters) to see how the same architecture handles harder problems. also thinking about a Flask API so you can upload a hand-drawn digit and get a prediction back.
 
 ---
 
