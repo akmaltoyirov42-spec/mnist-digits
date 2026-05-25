@@ -1,0 +1,10 @@
+__pycache__/
+.venv/
+venv/
+data/
+models/
+output/
+CLAUDE.md
+AGENTS.md
+.DS_Store
+*.pt
